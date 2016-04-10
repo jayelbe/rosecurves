@@ -1,6 +1,3 @@
-// Jessica Mear
-// March 29 2016
-
 // Graphics Experiements
 // Rose Equations found on Wikipedia: https://en.wikipedia.org/wiki/Rose_%28mathematics%29
 
