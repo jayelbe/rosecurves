@@ -1,3 +1,6 @@
+// Jessica Mear
+// March 29 2016
+
 // Graphics Experiements
 // Rose Equations found on Wikipedia: https://en.wikipedia.org/wiki/Rose_%28mathematics%29
 
@@ -17,32 +20,32 @@ var canvasDimension = 600;
 var theta = 0;
 var x = 0;
 var y = 0;
-var i = 0;
 
-
-// ====== VALUES TO MESS WITH THE LOOK ======
-// changes the frequency of drawing
-var thetaMod = 0.01;
 // changes the size of the rose
 var amplitude = randomWholeNumber(canvasDimension/10, canvasDimension/3);
+
 // max iterations of loop to run, hoping to use it to not run the for loop too many times
-var maxLoop = 15000;
+var maxLoop = 40000;
+
 // changes the rose style
+var myVar = randomWholeNumber(0,1);
 var n = randomWholeNumber(1,9);
 var d = randomWholeNumber(1,9);
-
-
-var myVar = randomWholeNumber(0,1);
-var kChoice =  myVar; 
-if(kChoice) var k = Math.random();
-else var k = n/d, maxLoop=maxLoop/2;
+var kChoice =  myVar; // confirm("Press ok to see crazy spirals!");
+//From Wikipedia: If k is rational, then the curve is closed and has finite length. If k is irrational, then it is not closed and has infinite length.
+if(kChoice) var k = Math.random(), maxLoop = 700;
+else var k = n/d, maxLoop=200;
 
 context.beginPath();
 
 for (i=0; i< maxLoop; i++) {
-	theta = thetaMod*i;
-	x = amplitude*Math.cos(k*theta)*Math.cos(theta)+canvasDimension/2;
-	y = amplitude*Math.cos(k*theta)*Math.sin(theta)+canvasDimension/2;
+	theta = 0.05*i;
+	// changing the second theta changes the shape
+	// theta +i, theta-i
+	// both theta*i, or one * and one +or-
+	// add d to one but no both creates ellipses (look like planet rings!)
+	x = amplitude*Math.cos(k*theta)*Math.cos(theta-i+d)+canvasDimension/2;
+	y = amplitude*Math.cos(k*theta)*Math.sin(theta-i+d)+canvasDimension/2;
 	context.lineTo(x, y);
 	context.font = "20px Arial";
 	context.fillStyle = "white";
