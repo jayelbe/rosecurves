@@ -1,4 +1,4 @@
-// Jessica Mear
+// Jess Mear
 // March 29 2016
 
 // Graphics Experiements
