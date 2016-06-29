@@ -22,16 +22,15 @@ var x = 0;
 var y = 0;
 
 // changes the size of the rose
-var amplitude = randomWholeNumber(canvasDimension/10, canvasDimension/3);
+var amplitude = randomWholeNumber(canvasDimension/5, canvasDimension/2);
 
 // max iterations of loop to run, hoping to use it to not run the for loop too many times
 var maxLoop = 40000;
 
 // changes the rose style
-var myVar = randomWholeNumber(0,1);
+var kChoice = randomWholeNumber(0,1);
 var n = randomWholeNumber(1,9);
 var d = randomWholeNumber(1,9);
-var kChoice =  myVar; // confirm("Press ok to see crazy spirals!");
 //From Wikipedia: If k is rational, then the curve is closed and has finite length. If k is irrational, then it is not closed and has infinite length.
 if(kChoice) var k = Math.random(), maxLoop = 700;
 else var k = n/d, maxLoop=200;
@@ -79,10 +78,12 @@ myAlpha = 1;
 if(!kChoice) context.fillText("k is found by dividing " + n + "/" + d ,20,30);
 else context.fillText("k is a random number between 0 and 1" ,20,30)
 context.fillText("k: " + k ,20,60);
+
 //context.fillText("myVar " + myVar ,20,540)
 //context.fillText("n/d " + n + "/" + d ,20,570)
 //context.fillText("RandomNum: " + myVar ,20,60);
 //context.fillText("x: " + x + "       y: " + y,20,90);
+
 context.strokeStyle = randomRGB(100, 255, 100, 255, 100, 255, 0.8, 1);//"rgba(" + myRed + "," + myGreen + "," + myBlue + "," + myAlpha + ")";
 context.stroke();
 context.endPath();
