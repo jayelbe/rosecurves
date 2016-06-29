@@ -32,8 +32,8 @@ var kChoice = randomWholeNumber(0,1);
 var n = randomWholeNumber(1,9);
 var d = randomWholeNumber(1,9);
 //From Wikipedia: If k is rational, then the curve is closed and has finite length. If k is irrational, then it is not closed and has infinite length.
-if(kChoice) var k = Math.random(), maxLoop = 700;
-else var k = n/d, maxLoop=200;
+if(kChoice) var k = Math.random(), maxLoop = 7000;
+else var k = n/d, maxLoop=2000;
 
 context.beginPath();
 
