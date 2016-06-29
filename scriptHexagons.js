@@ -43,8 +43,8 @@ for (i=0; i< maxLoop; i++) {
 	// theta +i, theta-i
 	// both theta*i, or one * and one +or-
 	// add d to one but no both creates ellipses (look like planet rings!)
-	x = amplitude*Math.cos(k*theta)*Math.cos(theta-i+d)+canvasDimension/2;
-	y = amplitude*Math.cos(k*theta)*Math.sin(theta-i+d)+canvasDimension/2;
+	x = amplitude*Math.cos(k*theta)*Math.cos(theta)+canvasDimension/2;
+	y = amplitude*Math.cos(k*theta)*Math.sin(theta)+canvasDimension/2;
 	context.lineTo(x, y);
 	context.font = "20px Arial";
 	context.fillStyle = "white";
